@@ -1,0 +1,35 @@
+{
+	"name": "graphql-fazt-course",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "babel src -d dist --source-maps",
+		"start": "nodemon src/index.js --exec babel-node",
+		"serve": "node dist/index.js",
+		"clean": "rimraf dist"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.1",
+		"express-graphql": "^0.12.0",
+		"graphql": "^16.5.0",
+		"graphql-tools": "^8.3.1",
+		"rimraf": "^3.0.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.18.10",
+		"@babel/core": "^7.18.10",
+		"@babel/node": "^7.18.10",
+		"@babel/preset-env": "^7.18.10",
+		"cz-conventional-changelog": "^3.3.0",
+		"nodemon": "^2.0.19"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
