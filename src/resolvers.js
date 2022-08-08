@@ -26,11 +26,14 @@ export const resolvers = {
 			await newUser.save();
 			return newUser;
 		},
+		deleteUser: async (_, { _id }) => await User.findByIdAndDelete(_id),
+		updateUser: async (_, { _id, input }) =>
+			await User.findByIdAndUpdate(_id, input, { new: true }),
 	},
 };
 
 /**
-* @concept Query 
+* @concept Query
 * @tst query {
 		tasks{
 			_id
